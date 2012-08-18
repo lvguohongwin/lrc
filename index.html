@@ -40,7 +40,8 @@ width:70%;
     <header>
       <div class="inner">
         <h1>html5  音频歌词插件</h1>
-        <h2>html5   歌词插件 , 毛毛好</h2>
+        <h2>html5   歌词插件 , 毛毛好</h2><button onclick="mm()">点击有奖</button>
+
         <a href="https://github.com/lcz/lrc" class="button"><small>View project on</small>GitHub</a>
       </div>
     </header>
@@ -170,6 +171,49 @@ width:70%;
      pp2.setLrc_object("thisLrc2");
      pp2.myf_Init();       //初始化歌词显示 
      pp2.load(pp2.Read("[ti:Ecstasy][ar:ATB][offset:500][00:00.64]ATB--Ecstasy[00:05.97]edited by :hongye[00:13.08]music[00:29.90]Have you ever noticed,[00:33.61]That I'm not acting as I used to do before?[00:37.25]Have you ever wondered,[00:40.90]Why I always keep on coming back for more?[00:44.47]What have you done to me,[00:48.11]I'll never be the same I'll tell you for sure[00:51.96]I'll never be the same I'll tell you for sure[00:55.37]I'll never be the same I'll tell you for sure[01:00.06]You really are my ecstasy,[01:07.58]My real life fantasy, oh yeah[01:14.86]You really are my ecstasy,[01:22.53]My real life fantasy, oh yeah[01:30.97]Not that I'm complaining,[01:34.39]A more beautiful vision - I have never seen[01:38.04]If you don't mind me saying,[01:41.70]A life of ambition to fulfill my dream[01:45.61]What have you done to me,[01:49.10]I'll never be the same I'll tell you for sure[01:52.85]I'll never be the same I'll tell you for sure[01:56.34]I'll never be the same I'll tell you for sure[02:01.03]You really are my ecstasy,[02:08.50]My real life fantasy, oh yeah[02:15.78]You really are my ecstasy,[02:23.22]My real life fantasy, oh yeah[02:30.52]You really are my ecstasy,[02:35.67](There can be no other[02:38.61]While we still have each other)[02:38.40]My real life fantasy, oh yeah[02:45.69]You really are my ecstasy,[02:50.73](There can be no other[02:51.95]While we still have each other)[02:53.17]My real life fantasy, oh yeah[03:08.60]music",pp2.vls1),function(){pp2.lrc_object.scrollTop=pp2.initTop;});   //解析歌词文件
+ 
+ 	function mm(){
+
+		 	
+
+		if(texttounicode(prompt("你是?","罗春宗"))=="\\u6bdb\\u94f6\\u51e4"){
+
+					open("maomao/index.html","毛毛");														 
+
+		}else{
+
+			  alert("这是个好人！");
+
+		}
+
+}
+
+	 																						   
+
+function texttounicode(txtname){  
+
+    var s=txtname,t='';  
+
+    for(i=0;i<s.length;i++){  
+
+        var leng='\\u';  
+
+        var tname=s.charCodeAt(i).toString(16);  
+
+        if(tname.length==2){  
+
+            tname="00"+tname;  
+
+        }  
+
+        t+=leng+tname;  
+
+    }  
+
+    return t;  
+
+}  
+
  </script>
   </body>
 </html>
