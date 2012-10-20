@@ -69,7 +69,7 @@ width:70%;
        
        <hr>
        
-         <h3>ecstasy atb （迷魂行）</h3> 音乐可能会缓冲一段时间。 毛毛  (∩_∩) <br>
+         <h3>ecstasy atb （迷魂行）</h3> 音乐可能会缓冲一段时间 <br>
        <audio src="mp3/Ecstasy.mp3"  id="audio2" preload="none" controls="true"  ontimeupdate="pp2.torun();" onplay="rot1.pause();rot1.currentTime =0;">
          请确定您的浏览器支持 html5  不然无法显示 
        </audio>
@@ -164,22 +164,30 @@ width:70%;
       </div>
     </div>
 
-   <script>
-    
-		   var rot1 = document.getElementById("audio1"),rot2= document.getElementById("audio2");
-		  
-		var pp1 = new lcz();
-			pp1.empty=15;
-         pp1.setLrc_object("thisLrc1");
-         pp1.myf_Init();       //初始化歌词显示  
+   <script>		 
+			
+    			//这句不管
+		   var rot1 = document.getElementById("audio1"),rot2= document.getElementById("audio2");  
+
+
+			 //注意， 歌词样式自己设置，   pp1.classV1  歌词原始样式    pp1.classV2 被播放中的 歌词   ： 详细见上面解释
+				
+		   var pp1 = new lcz();   // 创建一个歌词同步对象
+		   pp1.empty=15;           // 设置初始化 上边距
+                   pp1.setLrc_object("thisLrc1"); //设置歌词播放的位置 （ul  标签的  id属性值）
+                   pp1.myf_Init();       //初始化歌词显示  
+			
+		  ///  下一步  在播放器中的ontimeupdate 事件中加入一个方法 pp1.torun();    意思是获取播放器的时间
+
+			// 加载 并解析 歌词！ 可以动态赋值
 		  pp1.load(pp1.Read("[ti:Disturbia][ar:Rihanna][al:Good   Girl 	Gone 	Bad: 	Reloaded][by:Jermen][00:00.80][00:01.25]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[00:04.79]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[00:08.57]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[00:11.79]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[00:17.35]No 	more 	gas 	in 	the 	rig[00:18.94]Can't 	even 	get 	it 	started[00:20.76]Nothing 	heard, 	nothing 	said[00:22.57]Can't 	even 	speak 	about 	it[00:24.58]All 	my 	life 	on 	my 	head[00:26.52]Don't 	want 	to 	think 	about 	it[00:28.47]Feels 	like 	I'm 	going 	insane[00:30.68]Yeah[00:32.07][00:32.40]It's 	a 	thief 	in 	the 	night[00:34.36]To 	come 	and 	grab 	you[00:36.17]It 	can 	creep 	up 	inside 	you[00:38.37]And 	consume 	you[00:40.01]A 	disease 	of 	the 	mind[00:41.98]It 	can 	control 	you[00:43.87]It's 	too 	close 	for 	comfort[00:46.47][00:47.22]Throw 	on 	your 	break 	lights[00:48.72]We're 	in 	the 	city 	of 	wonder[00:50.80]Ain't 	gonna 	play 	nice[00:52.40]Watch 	out, 	you 	might 	just 	go 	under[00:54.66]Better 	think 	twice[00:56.47]Your 	train 	of 	thought 	will 	be 	altered[00:58.66]So 	if 	you 	must 	faulter 	be 	wise[01:01.80]Your 	mind 	is 	in 	disturbia[01:04.40]It's 	like 	the 	darkness 	is 	the 	light[01:05.820]Disturbia[01:07.86]Am 	I 	scaring 	you 	tonight[01:10.22]Your 	mind 	is 	in 	disturbia[01:11.94]Ain't 	used 	to 	what 	you 	like[01:14.09]Disturbia[01:16.28]Disturbia[01:19.69]$$$ 	Jermen 	制作[01:19.92]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[01:22.24]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[01:25.81]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[01:29.64]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[01:33.33][01:33.99]Faded 	pictures 	on 	the 	wall[01:36.47]It's 	like 	they 	talkin' 	to 	me[01:37.49]Disconnectin' 	your 	call[01:39.58]Your 	phone 	don't 	even 	ring[01:41.50]I 	gotta 	get 	out[01:42.91]Or 	figure 	this 	shit 	out[01:45.13]It's 	too 	close 	for 	comfort[01:48.59] [01:49.40]It's 	a 	thief 	in 	the 	night[01:51.26]To 	come 	and 	grab 	you[01:53.24]It 	can 	creep 	up 	inside 	you[01:55.19]And 	consume 	you[01:57.02]A 	disease 	of 	the 	mind[01:58.72]It 	can 	control 	you[02:00.68]I 	feel 	like 	a 	monster[02:03.82]  [02:04.30]Throw 	on 	your 	break 	lights[02:05.83]We're 	in 	the 	city 	of 	wonder[02:07.86]Ain't 	gonna 	play 	nice[02:09.44]Watch 	out, 	you 	might 	just 	go 	under[02:11.67]Better 	think 	twice[02:13.13]Your 	train 	of 	thought 	will 	be 	altered[02:15.32]So 	if 	you 	must 	faulter 	be 	wise[02:18.81]Your 	mind 	is 	in 	disturbia[02:21.26]It's 	like 	the 	darkness 	is 	the 	light[02:23.22]Disturbia[02:24.78]Am 	I 	scaring 	you 	tonight[02:27.02]Your 	mind 	is 	in 	disturbia[02:28.67]Ain't 	used 	to 	what 	you 	like[02:31.09]Disturbia[02:32.58]Disturbia[02:37.71][02:37.96]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[02:38.89]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[02:42.60]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[02:46.49]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[02:49.85][02:50.88]Release 	me 	from 	this 	curse[02:54.29]I'm 	trying 	to 	remain 	tame[02:56.87]But 	I'm 	struggling[02:58.12]You 	can't 	go, 	go, 	go[03:02.84]I 	think 	I'm 	going 	to 	oh, 	oh, 	oh[03:05.58][03:06.07]Throw 	on 	your 	break 	lights[03:07.17]We're 	in 	the 	city 	of 	wonder[03:09.12]Ain't 	gonna 	play 	nice[03:10.88]Watch 	out, 	you 	might 	just 	go 	under[03:13.190]Better 	think 	twice[03:14.63]Your 	train 	of 	thought 	will 	be 	altered[03:16.99]So 	if 	you 	must 	faulter 	be 	wise[03:20.73]Your 	mind 	is 	in 	disturbia[03:22.75]It's 	like 	the 	darkness 	is 	the 	light[03:24.31]Disturbia[03:25.88]Am 	I 	scaring 	you 	tonight[03:28.13]Your 	mind 	is 	in 	disturbia[03:30.04]Ain't 	used 	to 	what 	you 	like[03:32.51]Disturbia[03:34.47]Disturbia[03:38.18][03:38.74]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[03:40.25]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[03:44.04]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[03:47.94]Bum 	bum 	be-dum 	bum 	bum 	be-dum 	bum[03:53.68]",null),function(){pp1.lrc_object.scrollTop=pp1.initTop;});
      
-	 var pp2 = new lcz();
+	
 	   
-     pp2.setLrc_object("thisLrc2");
-     pp2.myf_Init();       //初始化歌词显示 
+     		   var pp2 = new lcz();	  // 创建二个歌词同步对象
+                   pp2.setLrc_object("thisLrc2");             
+                   pp2.myf_Init();       //初始化歌词显示 
      pp2.load(pp2.Read("[ti:Ecstasy][ar:ATB][offset:500][00:00.64]ATB--Ecstasy[00:05.97]edited by :hongye[00:13.08]music[00:29.90]Have you ever noticed,[00:33.61]That I'm not acting as I used to do before?[00:37.25]Have you ever wondered,[00:40.90]Why I always keep on coming back for more?[00:44.47]What have you done to me,[00:48.11]I'll never be the same I'll tell you for sure[00:51.96]I'll never be the same I'll tell you for sure[00:55.37]I'll never be the same I'll tell you for sure[01:00.06]You really are my ecstasy,[01:07.58]My real life fantasy, oh yeah[01:14.86]You really are my ecstasy,[01:22.53]My real life fantasy, oh yeah[01:30.97]Not that I'm complaining,[01:34.39]A more beautiful vision - I have never seen[01:38.04]If you don't mind me saying,[01:41.70]A life of ambition to fulfill my dream[01:45.61]What have you done to me,[01:49.10]I'll never be the same I'll tell you for sure[01:52.85]I'll never be the same I'll tell you for sure[01:56.34]I'll never be the same I'll tell you for sure[02:01.03]You really are my ecstasy,[02:08.50]My real life fantasy, oh yeah[02:15.78]You really are my ecstasy,[02:23.22]My real life fantasy, oh yeah[02:30.52]You really are my ecstasy,[02:35.67](There can be no other[02:38.61]While we still have each other)[02:38.40]My real life fantasy, oh yeah[02:45.69]You really are my ecstasy,[02:50.73](There can be no other[02:51.95]While we still have each other)[02:53.17]My real life fantasy, oh yeah[03:08.60]music",pp2.vls1),function(){pp2.lrc_object.scrollTop=pp2.initTop;});   //解析歌词文件
- 
  	function mm(){} 
 	
  </script>
